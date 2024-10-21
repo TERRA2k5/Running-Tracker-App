@@ -19,6 +19,8 @@
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/et_background"
+            android:backgroundTint="@color/md_blue_800"
             android:ems="10"
             android:hint="Your Name"
             android:inputType="textPersonName" />
@@ -40,6 +42,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:background="@drawable/et_background"
+            android:backgroundTint="@color/md_blue_800"
             android:hint="Your Weight"
             android:inputType="numberDecimal" />
 
@@ -50,6 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/btn_background"
         android:text="Apply Changes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
