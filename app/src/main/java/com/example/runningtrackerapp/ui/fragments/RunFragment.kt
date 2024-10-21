@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -58,6 +59,11 @@ class RunFragment : Fragment(R.layout.fragment_run), EasyPermissions.PermissionC
 
         viewModel.runs.observe(viewLifecycleOwner, Observer {
             runAdapter.submitList(it)
+
+            if(runAdapter.differ.currentList.size != 0){
+                requireActivity().image_noRecord.visibility = View.GONE
+                requireActivity().tv_noRecord.visibility = View.GONE
+            }
         })
         fab.setOnClickListener {
             findNavController().navigate(R.id.action_runFragment_to_trackingFragment)
